@@ -1,0 +1,63 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --body-bg-color: #f2f2f2;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100dvw;
+  min-height: 100dvh;
+  font-family: var(--main-font);
+  background-color: var(--body-bg-color);
+  padding: 16px;
+}
+ul{
+  list-style: none;
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#category-list{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+#category-list li {
+  display: flex;
+  gap: 6px;
+}
+#category-list :where(button , span){
+  font-size: 20px;
+}
+#category-form {
+  max-width: 300px;
+  display: flex;
+  gap: 6px;
+  background-color: #ffffff;
+  padding: 6px 14px;
+}
+#category-form button {
+  color: #ababab;
+  font-size: 20px;
+}
+#category-form input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  flex-grow: 1;
+}
+#category-form input::placeholder {
+  color: #ababab;
+}
