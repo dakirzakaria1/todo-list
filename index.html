@@ -3,72 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zakaria Dakir" />
+    <meta
+      name="description"
+      content="Smart Task Manager is your all-in-one productivity tool for organizing daily tasks, tracking progress, and achieving goals efficiently. With an intuitive interface, customizable categories, and real-time task counts, you can prioritize what matters most and stay on top of your to-do list. Perfect for both personal and professional use."
+    />
+    <meta
+      name="keywords"
+      content="to-do list, task manager, productivity, organize tasks, goal tracking, time management, daily planner"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
-    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js" defer></script>
-    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <title>To Do list</title>
   </head>
   <body>
-    <aside id="sidebar">
-      <span id="logo">Todo<span>Track</span></span>
-      <ul>
-        <li>
-          <ul>
-            <li>
-              <button type="button">All Tasks</button>
-              <span id="all-tasks-count"></span>
-            </li>
-            <li>
-              <button type="button">Checked Tasks</button
-              ><span id="checked-tasks-count"></span>
-            </li>
-            <li>
-              <button type="button">Favorites Task</button
-              ><span id="favorites-tasks-count"></span>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul id="category-list"></ul>
-        </li>
-      </ul>
-      <form id="category-form">
-        <input
-          type="text"
-          id="category-input"
-          placeholder="Add a new category"
-        />
-        <button type="submit" id="add-category-button">+</button>
+    <main class="main">
+      <a href="#" class="logo"> ToDo<span>List</span> </a>
+      <form id="add-task-form">
+        <input type="text" placeholder="Add your new task here..." id="task-name-input" />
+        <button type="submit" id="add-task-button">Add</button>
       </form>
-    </aside>
-    <span id="line"></span>
-    <main id="main">
-      <section>
-        <h1 id="title">All Tasks</h1>
-        <form id="task-form">
-          <input
-            type="text"
-            id="task-input"
-            placeholder="Add task or search by name"
-          />
-          <select id="task-category">
-            <option value="Categories" selected disabled>
-              Select a Category
-            </option>
-          </select>
-          <button type="submit" id="add-task-button">Add</button>
-        </form>
-        <ul id="task-list"></ul>
-      </section>
+      <h1>All Tasks:</h1>
+      <ul id="task-list"></ul>
     </main>
   </body>
 </html>
