@@ -93,7 +93,7 @@ button {
   flex-direction: column;
   gap: 27px;
   height: 70vh;
-  overflow:auto; 
+  overflow-y:auto; 
 }
 .main ul::-webkit-scrollbar {
   width: 8px;
