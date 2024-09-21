@@ -45,8 +45,6 @@ button {
   flex-basis: 700px;
   padding: 20px;
   border-radius: 8px;
-  max-height: calc(100vh - 16px);
-  overflow: hidden;
 }
 .main .logo {
   font-size: 35px;
@@ -94,8 +92,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  height: 100%;
-  overflow-y: auto; 
+  height: 70vh;
+  overflow:auto; 
 }
 .main ul::-webkit-scrollbar {
   width: 8px;
