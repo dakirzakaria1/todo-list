@@ -180,6 +180,7 @@ addNewTask.addEventListener("submit", (event) => {
     });
     saveDataToLocalStorage();
     updateTasksCount();
+    updateCompletedTasksCount()
     renderTasks();
     console.log(TASKS_ARRAY);
     newTaskName.value = "";
