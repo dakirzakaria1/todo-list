@@ -97,11 +97,8 @@ const deleteTask = (taskId) => {
 
 const renderTasks = () => {
   tasksList.innerHTML = "";
-  const sortedTasks = [...TASKS_ARRAY].sort(
-    (a, b) => !a.isChecked - !b.isChecked
-  );
-  if (sortedTasks.length > 0) {
-    sortedTasks.forEach((task) => {
+  if (TASKS_ARRAY.length > 0) {
+    TASKS_ARRAY.forEach((task) => {
       let taskItem = document.createElement("li");
       if (task.isChecked) {
         taskItem.classList.add("border-c-gray-500");
