@@ -85,8 +85,7 @@ const deleteTask = (taskId) => {
       `Are you sure you want to delete the task: "${task.name}"?`
     );
     if (isConfirmed) {
-      const taskIndex = TASKS_ARRAY.findIndex((task) => task.id === taskId);
-      TASKS_ARRAY.splice(taskIndex, 1);
+      TASKS_ARRAY = TASKS_ARRAY.filter((task) => task.id !== taskId);
       saveDataToLocalStorage();
       updateCompletedTasksCount();
       renderTasks();
